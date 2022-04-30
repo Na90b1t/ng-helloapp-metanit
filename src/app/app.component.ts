@@ -11,8 +11,6 @@ export class AppComponent {
   surname = 'surname';
   age = 25;
 
-  age = 100;
-
   sayFullName() {
     console.log(`My name is: ${this.name} ${this.surname}`);
   }
