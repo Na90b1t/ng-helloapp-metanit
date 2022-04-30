@@ -7,10 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   appTitle = 'ng-helloapp-metanit';
-  name = '';
-  surname = 'surname'
-
-  // log() {
-  //   console.log(12345);
-  // }
+  name = 'name';
+  surname = 'surname';
+  age = 25;
 }
