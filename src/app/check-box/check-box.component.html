@@ -1,0 +1,31 @@
+<div class="wrap-checkbox" [class]="border">
+  <div>
+    <div class="square" [class.isredbox]="isRed"></div>
+    <div class="square" [class.isredbox]="isRed"></div>
+    <div class="square" [class.isredbox]="!isRed"></div>
+    <input type="checkbox" [(ngModel)]="isRed" />
+  </div>
+  <div>
+    <div
+      class="square"
+      [style.backgroundColor]="isGreen ? 'green' : 'red'"
+    ></div>
+    <div
+      class="square"
+      [style.background-color]="!isGreen ? 'green' : 'red'"
+    ></div>
+    <input type="checkbox" [(ngModel)]="isGreen" />
+  </div>
+</div>
+
+<!-- В данном случае идет привязка переменной isRed к классу isredbox, который устанавливает красный цвет фона.
+У первого блока div устанавливается класс, если переменая имеет значение true: [class.isredbox]="isRed".
+У второго блока, наоборот, если у переменной значение false: [class.isredbox]="!isRed".
+Используя двустороннюю привязку к переменной isRed в элементе checkbox, мы можем изменить ее значение. -->
+
+<!-- Стоит отметить, что мы также можем использовать привязку свойств для установки класса (тут border)-->
+
+<!-- Выражение [style.backgroundColor]="isRed? 'red' : 'green'" указывает, что если переменная isRed равна true,
+то стилевому свойству background-color передается красный цвет, иначе передается зеленый цвет.
+Причем можно писать как style.background-color, так и style.backgroundColor,
+то есть вместо дефиса переводить следующий символ в верхний регистр. -->

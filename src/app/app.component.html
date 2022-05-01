@@ -1,7 +1,16 @@
 <label>Введите имя:</label>
-<input [(ngModel)]="name" placeholder="name" />
+
 <input type="text" [value]="surname" placeholder="name" />
+<input type="text" [value]="surname" placeholder="name" />
+
+<input type="text" [(ngModel)]="name" />
+<input type="text" [(ngModel)]="name" />
+
 <h1>Добро пожаловать {{ appTitle }}!</h1>
 
 <h1>Hello Angular 13</h1>
 <p>Angular 13 представляет модульную архитектуру приложения</p>
+
+<app-count-click></app-count-click>
+
+<app-check-box></app-check-box>
